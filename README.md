@@ -257,9 +257,8 @@ A base repository for the the Kubernetes HW of the Advance Networking Course in 
      3) Now, if we are using Mac or windows `kind` it is kind of hard to expose cluster nodes and services, so what we will do is just open bash to a pod like we learned before in part 3 section 5 (exec command)
      4) once you managed to open bash on some pod, run the following bash loop `for i in $(seq 1 20); do` click enter and type `curl $SCV_IP:8080` where `$SCV_IP` is the IP you copied in 4.2, click enter again, type `done` and click enter again.
      5) You shall us hiting a different Pod with every request.
-  5) Run `kubectl scale deployments/simple --replicas=2` to scale thr replica count down.
-  6) Run `kubectl get pods
-  7) ` to see the new amount of pods
+  5) Run `kubectl scale deployments/simple --replicas=2` to scale the replica count down.
+  6) Run `kubectl get pods` to see the new amount of pods
 
 - Suammry:
   - In the previous modules we created a Deployment, and then exposed it publicly via a Service. The Deployment created only one Pod for running our application. When traffic increases, we will need to scale the application to keep up with user demand. Scaling is accomplished by changing the number of replicas in a Deployment
